@@ -89,7 +89,7 @@ const generateRecordName = (file, pet_id,type,sub_folder_name='records/') => {
       } else {
           console.log(data.Location);
         console.log("succesfully uploaded the image!" );
-        resolve({url:'https://wgp-profile-images.s3.amazonaws.com/'+params.Key});
+        resolve({url:'url'+params.Key});
 
       }
     });
@@ -104,7 +104,7 @@ const generateFileName2 = (image) => {
   let folder_name='tobedeleted/';
   
   let params = {
-    Bucket: "wgp-profile-images",
+    Bucket: "bucket name",
     Key: folder_name+uuidv1(),
     Body: newImage,
     ContentEncoding: "base64",
@@ -120,7 +120,7 @@ const generateFileName2 = (image) => {
       } else {
           console.log(data.Location);
         console.log("succesfully uploaded the image!" );
-        resolve({url:'https://wgp-profile-images.s3.amazonaws.com/'+params.Key});
+        resolve({url:'url'+params.Key});
 
       }
     });
